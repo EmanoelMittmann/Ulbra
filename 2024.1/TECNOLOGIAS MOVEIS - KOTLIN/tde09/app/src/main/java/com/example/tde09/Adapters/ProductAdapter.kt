@@ -1,4 +1,4 @@
-package com.example.tde09
+package com.example.tde09.Adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -9,6 +9,9 @@ import android.widget.PopupMenu
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.tde09.Product.Product
+import com.example.tde09.R
+import com.example.tde09.convertToMoneyWithSynbol
 
 class ProductAdapter(
     private val items: MutableList<Product>,
@@ -24,7 +27,7 @@ class ProductAdapter(
         return ViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: ProductAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.itemView.rootView.setOnClickListener {
             goToDetail(items[position])
         }

@@ -1,9 +1,10 @@
 package com.example.tde09
 
 import androidx.lifecycle.ViewModel
+import com.example.tde09.Product.Product
 
 class MainViewModel : ViewModel() {
-    fun getProducts() = mutableListOf(
+    private var mutableList = mutableListOf(
         Product(
             urlImage = "https://t4.ftcdn.net/jpg/06/93/09/47/240_F_693094707_Eavnydwp6Su2Tx9REPzSZxDmEbElu0Az.jpg",
             name = "Laranja",
@@ -31,4 +32,11 @@ class MainViewModel : ViewModel() {
         )
     )
 
+    fun getProducts(): MutableList<Product>{
+        return this.mutableList
+    }
+
+    fun setProduct(payload: Product) {
+        this.mutableList.add(payload);
+    }
 }

@@ -15,7 +15,7 @@
         android:theme="@style/Theme.Tde09"
         tools:targetApi="31">
         <activity
-            android:name=".ProductDetailActivity"
+            android:name=".Product.ProductDetailActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

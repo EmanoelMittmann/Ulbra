@@ -1,4 +1,4 @@
-package com.example.tde09
+package com.example.tde09.Fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,10 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.ActivityCompat
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.RecyclerView
+import com.example.tde09.MainViewModel
+import com.example.tde09.R
+import com.example.tde09.configureToolbar
 
 
 class CreateProductFragment : Fragment() {
+
+    private lateinit var mainViewModel: MainViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -21,6 +27,8 @@ class CreateProductFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        mainViewModel = ViewModelProvider(this)[MainViewModel::class.java]
 
         (requireActivity() as AppCompatActivity).configureToolbar("Home", false)
     }

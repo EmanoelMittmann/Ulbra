@@ -1,4 +1,4 @@
-package com.example.tde09
+package com.example.tde09.Product
 
 import java.io.Serializable
 
